@@ -20,8 +20,8 @@ export default function Header(props)
 {
     return (<header className={Style.header_container}>
         <div className={Style.title_container}>
-            <div style={ { backgroundImage: `url(/assets/icons/${props.title_icon}.png)` } } className={Style.icon}></div>
-            <p>{props.title}</p>
+            <div onClick={props.title.icon.event} style={ { backgroundImage: `url(/assets/icons/${props.title.icon.name}.png)` } } className={Style.icon}></div>
+            <p onClick={props.title.event} >{props.title.text}</p>
         </div>
         <div className={Style.options_container}>{getOptions(props.options)}</div>
         { /* O container de icones só é renderizado caso sejam passdos icones. */ }

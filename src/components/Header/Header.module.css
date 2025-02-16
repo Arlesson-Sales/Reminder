@@ -7,6 +7,14 @@
     flex-direction: row;
     justify-content: space-between;
     max-width: var(--aplication-global-max-width);
+
+    p {
+        display: flex;
+        font-weight: 600;
+        user-select: none;
+        align-items: center;
+        font-family: Arial, sans-serif;
+    }
 }
 
 .title_container {
@@ -18,17 +26,11 @@
     p {
         cursor: pointer;
         text-indent: 6px;
-        color: #313131;
+        color: var(--color-03);
     }
 }
 
-p {
-    display: flex;
-    font-weight: 600;
-    user-select: none;
-    align-items: center;
-    font-family: Arial, sans-serif;
-}
+
 
 /* Formtando as opções de texto */
 .options_container {
@@ -40,6 +42,7 @@ p {
 
     p {
         margin: 0 10px;
+        cursor: pointer;
         color: var(--color-01);
     }
 }

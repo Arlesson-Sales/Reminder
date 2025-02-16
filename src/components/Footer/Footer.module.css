@@ -19,7 +19,7 @@
         padding: 10px;
         cursor: pointer;
         border-radius: 5px;
-        background-color: #ffffff;
+        background-color: var(--color-00);
         border: 2px solid var(--color-02);
         
         color: #a3a3a3;

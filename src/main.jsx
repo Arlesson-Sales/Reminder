@@ -1,5 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-doom/client'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import "./main.css"
 
 const root = document.querySelector("#root");
-ReactDOM.createRoot(root).render(<h1>Ola react e vite</h1>);
+ReactDOM.createRoot(root).render(<App />);

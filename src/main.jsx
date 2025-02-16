@@ -5,14 +5,12 @@ import "./main.css"
 
 //- Importando rotas
 import Home from './routes/Home/Home'
+import Reminder from './routes/Reminder/Reminder'
 
-const routers = createBrowserRouter([
-    {
-        path: "/",
-        element: <Home />,
-        children: []
-    }
+const router = createBrowserRouter([
+    { path: "/", element: <Home /> },
+    { path: "/reminder", element: <Reminder /> }
 ]);
 
 const root = document.querySelector("#root");
-ReactDOM.createRoot(root).render(<RouterProvider router={routers} />);
+ReactDOM.createRoot(root).render(<RouterProvider router={router} />);

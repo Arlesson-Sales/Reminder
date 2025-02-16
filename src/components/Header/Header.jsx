@@ -24,6 +24,7 @@ export default function Header(props)
             <p>{props.title}</p>
         </div>
         <div className={Style.options_container}>{getOptions(props.options)}</div>
-        <div className={Style.icons_container}>{getIcons(props.icons)}</div>
+        { /* O container de icones só é renderizado caso sejam passdos icones. */ }
+        { props.icons ? <div className={Style.icons_container}>{getIcons(props.icons)}</div> : null }
     </header>);
 }

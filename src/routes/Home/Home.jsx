@@ -11,6 +11,7 @@ export default function Home()
 
     return (<>
         <Header title_icon="bell" title="REMINDER" options={null} icons={icons} />
+        <div className="default_bar"></div>
         <Footer />
     </>);
 }

@@ -12,6 +12,14 @@
     --aplication-global-max-width: 600px;
 }
 
+.default_bar {
+    width: 90%;
+    height: 1px;
+    margin: auto;
+    max-width: 600px;
+    background-color: var(--color-02);
+}
+
 main {
     position: relative;
 }

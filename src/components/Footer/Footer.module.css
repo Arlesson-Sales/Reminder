@@ -1,0 +1,27 @@
+.footer_container {
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    
+    max-width: var(--aplication-global-max-width);
+    
+    left: 50%;
+    bottom: 0;
+    position: fixed;
+    transform: translateX(-50%);
+
+    input[type="button"] {
+        width: 100%;
+        outline: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: #ffffff;
+        border: 2px solid var(--color-02);
+        
+        color: #a3a3a3;
+        font-size: 1em;
+        text-align: left;
+        font-family: Arial, sans-serif;
+    }
+}

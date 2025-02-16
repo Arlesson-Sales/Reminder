@@ -8,4 +8,10 @@
 
 :root {
     --color-01: #2f98b8;
+    --color-02: #bbbbbb;
+    --aplication-global-max-width: 600px;
+}
+
+main {
+    position: relative;
 }

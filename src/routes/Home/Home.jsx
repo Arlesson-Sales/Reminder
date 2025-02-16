@@ -8,12 +8,7 @@ export default function Home()
         { name: "menu", event: null }
     ];
 
-    const options = [
-        { name: "CONCLUIR", event: null },
-        { name: "CANCELAR", event: null }
-    ];
-
     return (<>
-        <Header title_icon="bell" title="REMINDER" options={options} icons={icons} />
+        <Header title_icon="bell" title="REMINDER" options={null} icons={icons} />
     </>);
 }

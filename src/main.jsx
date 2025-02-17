@@ -5,11 +5,11 @@ import "./main.css"
 
 //- Importando rotas
 import Home from './routes/Home/Home'
-import Reminder from './routes/Reminder/Reminder'
+import Editor from './routes/Editor/Editor'
 
 const router = createBrowserRouter([
-    { path: "/", element: <Home /> },
-    { path: "/reminder", element: <Reminder /> }
+    { path: "/reminder", element: <Home /> },
+    { path: "/reminder/editor", element: <Editor /> }
 ]);
 
 const root = document.querySelector("#root");

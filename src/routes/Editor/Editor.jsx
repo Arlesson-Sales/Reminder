@@ -3,7 +3,7 @@ import Header from '../../components/Header/Header'
 import Textarea from '../../components/Textarea/Textarea'
 import { useNavigate } from 'react-router-dom'
 
-export default function Reminder()
+export default function Editor()
 {
     const navigate = useNavigate();
     const header_options = [{ name:"SALVAR", event: null } ];

@@ -1,12 +1,30 @@
-.text_container {
-    width: 60%;
+.reminder_area {
+    width: 100%;
     margin: auto;
-    height: 190px;
+    max-width: var(--aplication-global-max-width);
+}
+
+.reminder_title {
+    width: 80%;
+    margin: auto;
+    font-size: 0.8em;
+    color: var(--color-02);
+    font-family: Arial, sans-serif;
+
+    p {
+        margin: 8px auto;
+        user-select: none;
+        text-indent: 10px;
+    }
+}
+
+.text_container {
+    width: 80%;
+    margin: auto;
     border-radius: 8px;
     font-family: Arial, sans-serif;
     border: 1px solid var(--color-02);
     max-width: var(--aplication-global-max-width);
-    background-color: orange;
 
     textarea {
         width: 100%;
@@ -19,12 +37,29 @@
         min-height: 150px;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
-        background-color: red;
+        font-family: Arial, sans-serif;
+    }
+
+    input[type="button"] {
+        width: 100%;
+        border: none;
     }
 }
 
-.title_text {
-    font-size: 0.8em;
-    font-family: Arial, sans-serif;
-    color: var(--color-02);
+.condition_container {
+    width: 80%;
+    display: flex;
+    margin: 5px auto;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: var(--aplication-global-max-width);
+
+    input {
+        padding: 5px;
+        outline: none;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid var(--color-02);
+    }
 }

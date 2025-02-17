@@ -6,6 +6,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
+    background-color: var(--color-00);
     max-width: var(--aplication-global-max-width);
 
     p {
@@ -29,8 +30,6 @@
         color: var(--color-03);
     }
 }
-
-
 
 /* Formtando as opções de texto */
 .options_container {

@@ -7,6 +7,7 @@ export default function Home()
     const header_title = { text: "REMINDER", icon: { name: "bell", event: null }, event: null };
     const header_icons = [
         { name: "search", event: null },
+        { name: "dark", event: changeTheme },
         { name: "menu", event: null }
     ];
 

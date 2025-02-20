@@ -1,5 +1,6 @@
 import React from 'react'
 import Style from './Textarea.module.css'
+import Condition from '../Condition/Condition'
 
 function textareaDinamicHeight(event)
 {
@@ -21,9 +22,6 @@ export default function Textzone()
         <div className={Style.reminder_title}>
             <p>CONDIÇÂO</p>
         </div>
-        <div className={Style.condition_container}>
-            <input type="date" />
-            <input type="time" />
-        </div>
+        <Condition />
     </section>);
 }

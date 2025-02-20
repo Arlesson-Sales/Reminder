@@ -45,21 +45,3 @@
         border: none;
     }
 }
-
-.condition_container {
-    width: 80%;
-    display: flex;
-    margin: 5px auto;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    max-width: var(--aplication-global-max-width);
-
-    input {
-        padding: 5px;
-        outline: none;
-        cursor: pointer;
-        border-radius: 5px;
-        border: 1px solid var(--color-02);
-    }
-}

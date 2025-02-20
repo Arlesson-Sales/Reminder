@@ -1,7 +1,7 @@
 .condition_container {
-    width: 80%;
+    width: 85%;
+    margin: auto;
     display: flex;
-    margin: 5px auto;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: flex-start;

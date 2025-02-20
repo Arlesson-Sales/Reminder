@@ -1,0 +1,26 @@
+.Item_list {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+    input[type="checkbox"] {
+        border: none;
+        cursor: pointer;
+        margin: 5px 5px 2px 15px;
+        background-color: inherit;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        border: none;
+        outline: none;
+        text-indent: 5px;
+        padding: 10px 5px 7px;
+
+        color: inherit;
+        font-size: 1em;
+        text-align: left;
+        background-color: inherit;
+        font-family: Arial, sans-serif;
+    }
+}

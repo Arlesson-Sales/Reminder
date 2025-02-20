@@ -22,7 +22,7 @@ export default function Condition()
         else
             return (<div onClick={toggleCondition} className={Style.condition_button}>
                 <div style={ { backgroundImage: "url(./assets/icons/bell.png)" } } className={icon_class}></div>
-                <p>Condição</p>
+                <p>Definir condição</p>
             </div>);
     }
 

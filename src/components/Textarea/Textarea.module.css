@@ -22,7 +22,6 @@
     width: 88%;
     margin: auto;
     border-radius: 8px;
-    font-family: Arial, sans-serif;
     border: 1px solid var(--color-02);
     max-width: var(--aplication-global-max-width);
 
@@ -30,14 +29,15 @@
         width: 100%;
         resize: none;
         margin: auto;
-        padding: 8px;
         border: none;
+        padding: 10px;
         outline: none;
         display: block;
+        color: inherit;
         min-height: 150px;
+        background-color: inherit;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
-        font-family: Arial, sans-serif;
     }
 
     input[type="button"] {

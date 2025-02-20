@@ -8,11 +8,25 @@
 }
 
 :root {
-    --color_00: #f8f8f8;
+    --color_00: #fdfdfd;
     --color-01: #559dab;
     --color-02: #bbbbbb;
     --color-03: #313131;
     --aplication-global-max-width: 600px;
+}
+
+.light_theme {
+    height: 100vh;
+    color: var(--color-03);
+    border-color: var(--color-02);
+    background-color: var(--color_00);
+}
+
+.dark_theme {
+    height: 100vh;
+    color: var(--color_00);
+    border-color: var(--color-02);
+    background-color: var(--color-03);
 }
 
 .default_bar {

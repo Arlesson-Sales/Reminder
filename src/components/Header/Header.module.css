@@ -14,7 +14,6 @@
         font-weight: 600;
         user-select: none;
         align-items: center;
-        font-family: Arial, sans-serif;
     }
 }
 
@@ -27,7 +26,6 @@
     p {
         cursor: pointer;
         text-indent: 6px;
-        color: var(--color-03);
     }
 }
 

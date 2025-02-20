@@ -11,7 +11,7 @@ function getOptions(options)
 function getIcons(icons)
 {
     return icons?.map((icon, index) => {
-        const icon_image = { backgroundImage: `url(./assets/icons/${icon.name}.png)` }
+        const icon_image = { backgroundImage: `url(./Reminder/assets/icons/${icon.name}.png)` }
         return (<div key={index} onClick={icon.event} style={icon_image} className={Style.icon}></div>)
     })
 }

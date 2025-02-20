@@ -6,15 +6,31 @@
     flex-direction: row;
     justify-content: flex-start;
     max-width: var(--aplication-global-max-width);
-   
+
+    /* Estilizando os inputs de hora e data */
     input[type="date"], input[type="time"] {
-        padding: 5px;
+        padding: 2px;
+        border: none;
         outline: none;
         cursor: pointer;
+        margin-left: 8px;
         border-radius: 5px;
-        border: 1px solid var(--color-02);
+        background-color: inherit;
+        color: inherit;
     }
 
+    input[type="date"]::-webkit-calendar-picker-indicator,
+    input[type="time"]::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+        appearance: none;
+        background: no-repeat center right 0px;
+        background-size: 17px 17px;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator { margin-left: -10px; background-image: url(../../Reminder/assets/icons/date.png); }
+    input[type="time"]::-webkit-calendar-picker-indicator { background-image: url(../../Reminder/assets/icons/time.png) }
+
+    /* Formatando o botão de condição padrão */
     .condition_button {
         padding: 3px;
         display: flex;

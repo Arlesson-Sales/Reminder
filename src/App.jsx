@@ -18,7 +18,9 @@ function getUserTheme()
 
 export default function App()
 {
-    return (<main className={getUserTheme()}>
-        <Outlet />
-    </main>);
+    return (
+        <main className={getUserTheme()}>
+            <Outlet />
+        </main>
+    );
 }

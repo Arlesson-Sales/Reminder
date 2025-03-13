@@ -1,18 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Style from './Textarea.module.css'
 import Condition from '../Condition/Condition'
-import Item from '../Item/Item'
+import Item from './Item/Item'
 
-/**
- * Essa evento é chamado sempre que algo é digitado na caixa de texto, ele é responsavel
- * por atualizar o tamanho da caixa caso o texto digitado ultrapasse o limite.
- * 
- * @param {Object} event referencia ao objeto de evento.
- */
-function textareaDinamicHeight(event)
+function updateTextarea(textarea ,reminder)
 {
-    event.target.style.height = "auto";
-    event.target.style.height = String(event.target.scrollHeight) + "px";
+    reminder.title = textarea.value;
+    textarea.style.height = "auto";
+    textarea.style.height = String(textarea.scrollHeight) + "px";
 }
 
 /**
@@ -37,22 +32,27 @@ function getItensElements(amount, last_item_reference, setAmount)
     return list;
 }
 
-export default function Textzone()
+export default function Textzone(props)
 {
     const [ itens_amount, setAmount ] = useState(() => 0);
     const last_item_reference = useRef(null);
+    const itens_container = useRef(null);
 
-    useEffect(() => last_item_reference.current?.focus() , [ itens_amount ]);
+    useEffect(() => {
+        props.reminder.container = itens_container.current;
+        last_item_reference.current?.focus();
+
+    }, [ itens_amount ]);
 
     return (<section className={Style.reminder_area}>
         <div className={Style.reminder_title}>
             <p>LEMBRETE</p>
         </div>
         <div className={Style.text_container}>
-            <textarea onInput={textareaDinamicHeight}></textarea>
+            <textarea onInput={ event => updateTextarea(event.target, props.reminder)}></textarea>
             
             <div className="default_bar"></div>
-            <div>
+            <div ref={itens_container}>
                 {getItensElements(itens_amount, last_item_reference, setAmount)}
             </div>
 

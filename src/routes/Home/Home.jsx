@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import Header from '../../components/Header/Header'
+import Showcase from '../../components/Showcase/Showcase'
 import Footer from '../../components/Footer/Footer'
 
 /**
@@ -25,6 +26,7 @@ function toggleTheme()
 
 export default function Home()
 {
+    //Configurando o cabeçalho e seus icones.
     const header_title = { text: "REMINDER", icon: { name: "bell", event: null }, event: null };
     const header_icons = [
         { name: "search", event: null },
@@ -32,9 +34,11 @@ export default function Home()
         { name: "menu", event: null }
     ];
 
-    return (<>
-        <Header title={header_title} options={null} icons={header_icons} />
-        <div className="default_bar"></div>
-        <Footer />
-    </>);
+    return (
+        <>
+            <Header title={header_title} options={null} icons={header_icons} />
+            <div className="default_bar"></div>
+            <Footer />
+        </>
+    );
 }

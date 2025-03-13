@@ -16,14 +16,14 @@
 }
 
 .light_theme {
-    height: 100vh;
+    height: 100%;
     color: var(--color-03);
     border-color: var(--color-02);
     background-color: var(--color_00);
 }
 
 .dark_theme {
-    height: 100vh;
+    height: 100%;
     color: var(--color_00);
     border-color: var(--color-02);
     background-color: var(--color-03);

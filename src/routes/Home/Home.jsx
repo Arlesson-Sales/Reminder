@@ -2,16 +2,25 @@ import React from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 
+/**
+ * Essa função é responsavel por fazer a troca entre o tema branco e o escuro, além de salvar
+ * essas informações no local storage do navegador parem serem resgatadas futuramente.
+ */
 function toggleTheme()
 {
     const main_element = document.querySelector("main");
     const current_theme_name = main_element.className;
-    let next_theme_name = current_theme_name === "light_theme" ? "dark_theme" : "light_theme";
+
+    const reminder_theme_data = {
+        name: current_theme_name === "light_theme" ? "dark_theme" : "light_theme",
+        body_color: current_theme_name === "light_theme" ? "#313131" : "#fdfdfd"
+    }
 
     main_element.classList.remove(current_theme_name);
-    main_element.classList.add(next_theme_name);
-    
-    window.localStorage.setItem("user_theme", next_theme_name);
+    main_element.classList.add(reminder_theme_data.name);
+
+    window.document.body.style.backgroundColor = reminder_theme_data?.body_color ?? "#fdfdfd"
+    window.localStorage.setItem("reminder_theme_data", JSON.stringify(reminder_theme_data));
 }
 
 export default function Home()

@@ -21,17 +21,18 @@ function textareaDinamicHeight(event)
  * 
  * @param {Number} amount quantidade de elementos Item.
  * @param {Object} last_item_reference objeto gerado pelo hook useRef
+ * @param {Function} setAmount referencia a função do useState
  * @returns 
  */
-function getItensElements(amount, last_item_reference)
+function getItensElements(amount, last_item_reference, setAmount)
 {
     const list = [];
     for (let index = 0; index < amount; index++)
     {
         if (index === amount - 1)
-            list.push(<Item key={index} ref={last_item_reference} />);
+            list.push(<Item key={index} ref={last_item_reference} setAmount={setAmount} />);
         else
-            list.push(<Item key={index} />);
+            list.push(<Item key={index} setAmount={setAmount} />);
     }
     return list;
 }
@@ -52,7 +53,7 @@ export default function Textzone()
             
             <div className="default_bar"></div>
             <div>
-                {getItensElements(itens_amount, last_item_reference)}
+                {getItensElements(itens_amount, last_item_reference, setAmount)}
             </div>
 
             <input onClick={() => setAmount(value => value + 1)} className="default_button" type="button" value={ itens_amount ? " +  Adicionar item" : "+  Adicionar lista verif." } />

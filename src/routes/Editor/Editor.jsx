@@ -2,33 +2,18 @@ import React from 'react'
 import Header from '../../components/Header/Header'
 import Textarea from '../../components/Textarea/Textarea'
 import { useNavigate } from 'react-router-dom'
-
-function createReminderItens(container)
-{
-    return [...container?.children].map(element => {
-        return {
-            name: element.lastChild.value,
-            checked: element.firstChild.checked
-        }
-    });
-}
-
-function saveReminder(reminder, navigate)
-{
-    const reminders = JSON.parse(window.localStorage.getItem("reminders_data") ?? "[]");
-    reminder.itens = createReminderItens(reminder.container);
-    delete reminder.container;
-    
-    reminders.push(reminder);
-    window.localStorage.setItem("reminders_data", JSON.stringify(reminders));
-    navigate(-1);
-}
+import { saveReminder } from '../../scripts/reminder.js'
 
 export default function Editor()
 {
     const navigate = useNavigate();
     const reminder = { title: "", container: null, itens: null };
-    const header_options = [{ name:"SALVAR", event: () => saveReminder(reminder, navigate) } ];
+
+    //Configurando o cabeçalho da tela de edição de lembrete.
+    const header_options = [{ name:"SALVAR", event: () => {
+        saveReminder(reminder); //Salavando o reminder.
+        navigate(-1);           //Retornando a pagina inicial.
+    } } ];
 
     const header_title = {
         text: "ADICIONAR O LEMBRETE", event: null,

@@ -7,10 +7,12 @@
     margin-bottom: 8px;
     flex-direction: row;
     justify-content: center;
+    background-color: var(--color-00);
     max-width: var(--aplication-global-max-width);
     
     left: 50%;
     bottom: 0;
+    z-index: 100;
     position: fixed;
     transform: translateX(-50%);
 }

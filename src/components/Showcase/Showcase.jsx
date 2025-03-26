@@ -1,14 +1,15 @@
 import React from 'react'
-import Item from './Item/Item'
+import Style from './Showcase.module.css'
 
 function createReminderElements(reminders)
 {
     return reminders.map((reminder, index) => {
         return (
-            <>
-                <Item title={reminder.title} key={index} />
+            <li key={index}>
+                <p className={Style.reminder_title}>{reminder.title}</p>
+                <p className={Style.reminder_alert}>Nenhum alerta</p>
                 <div className="default_bar"></div>
-            </>
+            </li>
         );
     });
 }
@@ -16,10 +17,8 @@ function createReminderElements(reminders)
 export default function Showcase(props)
 {
     return (
-        <section>
-            <ul>
-                {createReminderElements(props.reminders)}
-            </ul>
+        <section className={Style.reminder_list}>
+            <ul> {createReminderElements(props.reminders)} </ul>
         </section>
     );
 }

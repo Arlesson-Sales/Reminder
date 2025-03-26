@@ -1,0 +1,27 @@
+.reminder_list {
+    margin: auto;
+    max-width: 600px;
+
+    ul {
+        li {
+            cursor: pointer;
+            list-style: none;
+            padding: 11px 10px;
+
+            .reminder_title {
+                width: 88%;
+                margin: auto;
+                user-select: none;
+            }
+            
+            .reminder_alert {
+                width: 88%;
+                margin: auto;
+                font-size: 0.8em;
+                user-select: none;
+                padding-bottom: 10px;
+                color: var(--color-04);
+            }
+        }
+    }
+}

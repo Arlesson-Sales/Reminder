@@ -31,3 +31,10 @@ export function saveReminder(reminder)
     reminders.push(reminder);
     window.localStorage.setItem("reminders_data", JSON.stringify(reminders));
 }
+
+export function loadReminders()
+{
+    const reminders = JSON.parse(window.localStorage.getItem("reminders_data")) ?? [];
+    console.log(reminders);
+    return reminders;
+}

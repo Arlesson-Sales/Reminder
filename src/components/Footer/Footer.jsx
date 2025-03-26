@@ -7,7 +7,9 @@ export default function Footer()
 {
     const navigate = useNavigate();
 
-    return (<footer className={Style.footer_container}>
-        <input className="default_button" onClick={() => navigate("editor")} type="button" value="+ Escreva um lembrete" />
-    </footer>);
+    return (
+        <footer className={Style.footer_container}>
+            <input className="default_button" onClick={() => navigate("editor")} type="button" value="+ Escreva um lembrete" />
+        </footer>
+    );
 }

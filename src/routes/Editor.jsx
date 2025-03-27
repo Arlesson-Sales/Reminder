@@ -1,8 +1,8 @@
 import React from 'react'
-import Header from '../../components/Header/Header'
-import Textarea from '../../components/Textarea/Textarea'
+import Header from '../components/Header/Header.jsx'
+import Textarea from '../components/Textarea/Textarea.jsx'
 import { useNavigate } from 'react-router-dom'
-import { saveReminder } from '../../scripts/reminder.js'
+import { saveReminder } from '../scripts/reminder.js'
 
 export default function Editor()
 {

@@ -5,8 +5,8 @@ import "./main.css"
 
 //- Importando rotas
 import App from './App'
-import Home from './routes/Home/Home'
-import Editor from './routes/Editor/Editor'
+import Home from './routes/Home'
+import Editor from './routes/Editor'
 
 const router = createBrowserRouter([
     {

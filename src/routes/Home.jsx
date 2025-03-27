@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react'
-import Header from '../../components/Header/Header'
-import Showcase from '../../components/Showcase/Showcase'
-import Footer from '../../components/Footer/Footer'
-import { loadReminders } from '../../scripts/reminder.js';
+import Header from '../components/Header/Header.jsx'
+import Showcase from '../components/Showcase/Showcase.jsx'
+import Footer from '../components/Footer/Footer.jsx'
+import { loadReminders } from '../scripts/reminder.js';
 
 /**
  * Essa função é responsavel por fazer a troca entre o tema branco e o escuro, além de salvar

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { useState } from 'react'
 import Header from '../components/Header/Header.jsx'
 import Showcase from '../components/Showcase/Showcase.jsx'
 import Footer from '../components/Footer/Footer.jsx'
@@ -34,6 +34,7 @@ export default function Home()
         { name: "dark", event: toggleTheme },
         { name: "menu", event: null }
     ];
+
 
     return (
         <>

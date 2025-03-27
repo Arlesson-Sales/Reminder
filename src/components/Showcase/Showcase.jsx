@@ -3,6 +3,7 @@ import Style from './Showcase.module.css'
 
 function createReminderElements(reminders)
 {
+    console.log(reminders)
     return reminders.map((reminder, index) => {
         return (
             <li key={index}>

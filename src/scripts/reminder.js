@@ -24,17 +24,21 @@ export function createReminderItens(container)
  */
 export function saveReminder(reminder)
 {
-    const reminders = JSON.parse(window.localStorage.getItem("reminders_data") ?? "[]");
+    const reminders = JSON.parse(window.localStorage.getItem("reminders_data")) ?? { data: [] };
     reminder.itens = createReminderItens(reminder.container);
     delete reminder.container;
     
-    reminders.push(reminder);
+    reminders.data.unshift(reminder);
     window.localStorage.setItem("reminders_data", JSON.stringify(reminders));
 }
 
+/**
+ * Essa função faz o carregamento de todos os lembretes adicionados posteriormente e salvos
+ * no localStorage.
+ * @returns {Array<Object>}
+ */
 export function loadReminders()
 {
-    const reminders = JSON.parse(window.localStorage.getItem("reminders_data")) ?? [];
-    console.log(reminders);
-    return reminders;
+    const reminders = JSON.parse(window.localStorage.getItem("reminders_data")) ?? { data: [] };
+    return reminders.data;
 }

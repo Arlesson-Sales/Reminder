@@ -28,7 +28,7 @@ function toggleTheme()
 export default function Home()
 {
     //Configurando o cabeçalho e seus icones.
-    const header_title = { text: "REMINDER", icon: { name: "bell", event: null }, event: null };
+    const header_title = { name: "REMINDER", icon: { name: "bell", event: null }, event: null };
     const header_icons = [
         { name: "search", event: null },
         { name: "dark", event: toggleTheme },

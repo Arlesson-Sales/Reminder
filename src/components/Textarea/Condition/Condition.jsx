@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Style from './Condition.module.css'
-import { icon as icon_class } from '../Header/Header.module.css'
+import { icon as icon_class } from '../../Header/Header.module.css'
 
 export default function Condition()
 {

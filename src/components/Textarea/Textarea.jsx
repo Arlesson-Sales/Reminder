@@ -1,8 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Style from './Textarea.module.css'
-import Condition from '../Condition/Condition'
+import Condition from './Condition/Condition'
 import Item from './Item/Item'
 
+/**
+ * Essa função é sempre chamada no evento de digitação dentro da área de texto pois ele verifica se a 
+ * quantidade de letras digitas já passou do tamanho da zona para poder aumentar sua altura.
+ * 
+ * @param {HTMLTextAreaElement} textarea referencia ao elemento HTMl da textarea.
+ * @param {Object} reminder referencia ao lembrente atual que esta sendo criado.
+ */
 function updateTextarea(textarea ,reminder)
 {
     reminder.title = textarea.value;
@@ -16,8 +23,8 @@ function updateTextarea(textarea ,reminder)
  * 
  * @param {Number} amount quantidade de elementos Item.
  * @param {Object} last_item_reference objeto gerado pelo hook useRef
- * @param {Function} setAmount referencia a função do useState
- * @returns 
+ * @param {React.Dispatch<React.SetStateAction<number>>} setAmount referencia a função do useState
+ * @returns {React.JSX.Element}
  */
 function getItensElements(amount, last_item_reference, setAmount)
 {
@@ -32,6 +39,13 @@ function getItensElements(amount, last_item_reference, setAmount)
     return list;
 }
 
+/**
+ * Esse componente representa a área de digitação do texto do lembrente. Ela está contida dentro do
+ * editor de lembrentes.
+ * 
+ * @param {Object} props 
+ * @returns 
+ */
 export default function Textzone(props)
 {
     const [ itens_amount, setAmount ] = useState(() => 0);

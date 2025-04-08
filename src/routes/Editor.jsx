@@ -16,7 +16,7 @@ export default function Editor()
     } } ];
 
     const header_title = {
-        text: "ADICIONAR O LEMBRETE", event: null,
+        name: "ADICIONAR O LEMBRETE", event: null,
         icon: { name: "back", event: () => navigate(-1) },
     };
 

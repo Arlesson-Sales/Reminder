@@ -7,6 +7,7 @@ import "./main.css"
 import App from './App'
 import Home from './routes/Home'
 import Editor from './routes/Editor'
+import Viewer from './routes/Viewer'
 
 const router = createBrowserRouter([
     {
@@ -14,7 +15,8 @@ const router = createBrowserRouter([
         element: <App />,
         children: [
             { path: "/reminder", element: <Home /> },
-            { path: "/reminder/editor", element: <Editor /> }
+            { path: "/reminder/editor", element: <Editor /> },
+            { path: "/reminder/viewer", element: <Viewer /> }
         ]
     },
 

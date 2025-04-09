@@ -19,6 +19,7 @@ export default function Viewer()
 
     return <>
         <Header title={header_title} options={header_options} />
-        <ReminderViewer reminder={reminder} />
+        <div className="default_bar"></div>
+        <ReminderViewer reminder={reminder}/>
     </>
 }

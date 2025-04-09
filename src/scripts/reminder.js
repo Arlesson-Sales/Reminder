@@ -24,10 +24,14 @@ export function createReminderItens(container)
  */
 export function saveReminder(reminder)
 {
+    //Verificando se o reminder possui um container
+    if (reminder.container)
+    {
+        reminder.itens = createReminderItens(reminder.container);
+        delete reminder.container;
+    }
+        
     const reminders = JSON.parse(window.localStorage.getItem("reminders_data")) ?? { data: [] };
-    reminder.itens = createReminderItens(reminder.container);
-    delete reminder.container;
-    
     reminders.data.unshift(reminder);
     window.localStorage.setItem("reminders_data", JSON.stringify(reminders));
 }

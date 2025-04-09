@@ -1,0 +1,35 @@
+.reminder_viewer {
+    margin: auto;
+    max-width: var(--aplication-global-max-width);
+
+    .viewer_header {
+        p {
+            max-width: 80%;
+            font-size: 1.3em;
+            margin: 20px auto;
+            text-align: justify;
+            font-weight: lighter;
+        }
+    }
+
+    .viewer_list {
+        max-width: 80%;
+        margin: 2px auto;
+        list-style: none;
+
+        li {
+            display: flex;
+            cursor: pointer;
+            flex-wrap: nowrap;
+            flex-direction: row;
+
+            p { padding: 5px; }
+            .item_checked { text-decoration: line-through; }
+
+            input[type="checkbox"] {
+                cursor: pointer;
+                margin-right: 5px;
+            }
+        }
+    }
+}

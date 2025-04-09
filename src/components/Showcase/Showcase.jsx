@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom'
  */
 function openReminderViewer(reminder, navigate)
 {
-    navigate("/reminder/viewer", { state: { reminder } });
+    navigate("viewer", { state: { reminder } });
 }
 
 /**
